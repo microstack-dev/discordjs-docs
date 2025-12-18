@@ -1,0 +1,14 @@
+{
+  "name": "discordjs-docs",
+  "version": "0.1.0",
+  "description": "Complete documentation handbook for Discord.js v14.25.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}
