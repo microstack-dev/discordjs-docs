@@ -8,7 +8,10 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Getting Started', link: '/getting-started/introduction' },
       { text: 'Core Concepts', link: '/core-concepts/client-lifecycle' },
-      { text: 'Builders', link: '/builders/overview' }
+      { text: 'Builders', link: '/builders/overview' },
+      { text: 'Interactions', link: '/interactions/overview' },
+      { text: 'Components', link: '/components/overview' },
+      { text: 'Collectors', link: '/collectors/overview' }
     ],
     
     sidebar: {
@@ -99,6 +102,85 @@ export default defineConfig({
                 { text: 'FileBuilder', link: '/builders/file-builder' }
               ]
             }
+          ]
+        }
+      ],
+
+      '/interactions/': [
+        {
+          text: 'Interactions',
+          items: [
+            { text: 'Overview', link: '/interactions/overview' },
+            { text: 'Lifecycle', link: '/interactions/lifecycle' },
+            { text: 'Deferring and Updating', link: '/interactions/deferring-and-updating' },
+            { text: 'Ephemeral Interactions', link: '/interactions/ephemeral-interactions' },
+            { text: 'Error Handling', link: '/interactions/error-handling' }
+          ]
+        }
+      ],
+
+      '/components/': [
+        {
+          text: 'Components',
+          items: [
+            { text: 'Overview', link: '/components/overview' },
+            { text: 'Component Routing', link: '/components/component-routing' },
+            { text: 'State Management', link: '/components/state-management' },
+            { text: 'Security', link: '/components/security' },
+            { text: 'Cleanup and Timeouts', link: '/components/cleanup-and-timeouts' }
+          ]
+        }
+      ],
+
+      '/collectors/': [
+        {
+          text: 'Collectors',
+          items: [
+            { text: 'Overview', link: '/collectors/overview' },
+            { text: 'Message Collectors', link: '/collectors/message-collectors' },
+            { text: 'Component Collectors', link: '/collectors/component-collectors' },
+            { text: 'Filters', link: '/collectors/filters' },
+            { text: 'Performance', link: '/collectors/performance' }
+          ]
+        }
+      ],
+
+      '/permissions/': [
+        {
+          text: 'Permissions',
+          items: [
+            { text: 'Overview', link: '/permissions/overview' },
+            { text: 'Permission Flags', link: '/permissions/permission-flags' },
+            { text: 'Role Hierarchy', link: '/permissions/role-hierarchy' },
+            { text: 'Slash Command Permissions', link: '/permissions/slash-command-permissions' },
+            { text: 'Secure Admin Commands', link: '/permissions/secure-admin-commands' }
+          ]
+        }
+      ],
+
+      '/events/': [
+        {
+          text: 'Events',
+          items: [
+            { text: 'Overview', link: '/events/overview' }
+          ]
+        }
+      ],
+
+      '/error-handling/': [
+        {
+          text: 'Error Handling',
+          items: [
+            { text: 'Overview', link: '/error-handling/overview' }
+          ]
+        }
+      ],
+
+      '/previews/': [
+        {
+          text: 'Previews',
+          items: [
+            { text: 'Overview', link: '/previews/overview' }
           ]
         }
       ]

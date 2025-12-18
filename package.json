@@ -1,6 +1,6 @@
 {
   "name": "discordjs-docs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Complete documentation handbook for Discord.js v14.25.1",
   "type": "module",
   "scripts": {

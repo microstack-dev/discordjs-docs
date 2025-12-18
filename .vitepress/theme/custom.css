@@ -1,0 +1,140 @@
+/* Custom CSS for discordjs-docs */
+
+:root {
+  --vp-c-brand: #5865f2;
+  --vp-c-brand-light: #7289da;
+  --vp-c-brand-dark: #4752c4;
+  --vp-c-text-code: #00ff88;
+  --vp-c-border: #2f3136;
+  --vp-c-bg-alt: #36393f;
+  --vp-c-bg: #202225;
+}
+
+/* Typography improvements */
+.VPContent .vp-doc h1,
+.VPContent .vp-doc h2,
+.VPContent .vp-doc h3 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.VPContent .vp-doc p {
+  line-height: 1.7;
+  color: #dcddde;
+}
+
+/* Code block improvements */
+.vp-code {
+  background-color: #2f3136 !important;
+  border: 1px solid #40444b;
+  border-radius: 4px;
+}
+
+.vp-code .line {
+  color: #b9bbbe;
+}
+
+/* Link styling */
+.VPContent .vp-doc a {
+  color: #00aff4;
+  text-decoration: none;
+}
+
+.VPContent .vp-doc a:hover {
+  color: #00ccff;
+  text-decoration: underline;
+}
+
+/* Sidebar improvements */
+.VPSidebar .group .item {
+  color: #b9bbbe;
+}
+
+.VPSidebar .group .item.active {
+  color: #ffffff;
+  background-color: #40444b;
+}
+
+/* Preview container styling */
+.preview-container {
+  border: 2px solid #5865f2;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #36393f;
+}
+
+.preview-container h4 {
+  color: #ffffff;
+  margin-top: 0;
+  border-bottom: 1px solid #5865f2;
+  padding-bottom: 8px;
+}
+
+/* Discord-style message simulation */
+.discord-message {
+  background-color: #36393f;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-left: 4px solid #5865f2;
+  font-family: 'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.discord-message .author {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.discord-message .content {
+  color: #dcddde;
+  line-height: 1.4;
+}
+
+.discord-message .embed {
+  background-color: #2f3136;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 8px;
+  border-left: 4px solid #5865f2;
+}
+
+.discord-message .embed .title {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.discord-message .embed .description {
+  color: #b9bbbe;
+  font-size: 0.9em;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus indicators */
+.VPContent .vp-doc button:focus,
+.VPContent .vp-doc a:focus {
+  outline: 2px solid #5865f2;
+  outline-offset: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .preview-container {
+    margin: 8px 0;
+    padding: 12px;
+  }
+
+  .discord-message {
+    padding: 8px 12px;
+  }
+}

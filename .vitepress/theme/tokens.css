@@ -1,0 +1,162 @@
+/* Design tokens for discordjs-docs */
+
+:root {
+  /* Colors */
+  --discord-blurple: #5865f2;
+  --discord-blurple-light: #7289da;
+  --discord-blurple-dark: #4752c4;
+
+  --discord-green: #57f287;
+  --discord-green-dark: #3ba55c;
+
+  --discord-yellow: #fee75c;
+  --discord-yellow-dark: #d6a92b;
+
+  --discord-red: #ed4245;
+  --discord-red-dark: #b91c1c;
+
+  --discord-gray-100: #f2f3f5;
+  --discord-gray-200: #e3e5e8;
+  --discord-gray-300: #d1d4d9;
+  --discord-gray-400: #b9bbbe;
+  --discord-gray-500: #8e9297;
+  --discord-gray-600: #72767d;
+  --discord-gray-700: #5c5f66;
+  --discord-gray-800: #464950;
+  --discord-gray-900: #2f3136;
+
+  /* Typography */
+  --font-family-primary: 'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+
+  /* Border radius */
+  --border-radius-sm: 0.125rem;
+  --border-radius-md: 0.375rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-2xl: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* Dark theme overrides for Discord-like appearance */
+.dark {
+  --vp-c-bg: var(--discord-gray-900);
+  --vp-c-bg-alt: var(--discord-gray-800);
+  --vp-c-bg-soft: var(--discord-gray-700);
+
+  --vp-c-text-1: #ffffff;
+  --vp-c-text-2: var(--discord-gray-100);
+  --vp-c-text-3: var(--discord-gray-200);
+
+  --vp-c-border: var(--discord-gray-700);
+  --vp-c-divider: var(--discord-gray-600);
+
+  --vp-c-brand: var(--discord-blurple);
+  --vp-c-brand-light: var(--discord-blurple-light);
+  --vp-c-brand-dark: var(--discord-blurple-dark);
+}
+
+/* Component-specific tokens */
+.discord-message {
+  --message-bg: var(--discord-gray-800);
+  --message-border: var(--discord-blurple);
+  --message-text: var(--discord-gray-100);
+  --message-author: #ffffff;
+}
+
+.discord-embed {
+  --embed-bg: var(--discord-gray-700);
+  --embed-border: var(--discord-blurple);
+  --embed-title: #ffffff;
+  --embed-description: var(--discord-gray-200);
+}
+
+.preview-container {
+  --preview-border: var(--discord-blurple);
+  --preview-bg: var(--discord-gray-800);
+  --preview-header: #ffffff;
+}
+
+/* Animation tokens */
+@keyframes discord-fade-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes discord-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Utility classes */
+.animate-fade-in {
+  animation: discord-fade-in var(--transition-normal);
+}
+
+.animate-pulse {
+  animation: discord-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 640px) {
+  :root {
+    --font-size-base: 0.95rem;
+    --spacing-4: 0.875rem;
+    --spacing-6: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-lg: 1rem;
+    --font-size-xl: 1.125rem;
+  }
+}
