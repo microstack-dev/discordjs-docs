@@ -1,17 +1,18 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Discord.js Documentation',
-  description: 'Complete documentation handbook for Discord.js v14.25.1',
+  title: 'Discord.js Documentation v0.4.0',
+  description: 'Complete production handbook for Discord.js v14.25.1',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Getting Started', link: '/getting-started/introduction' },
       { text: 'Core Concepts', link: '/core-concepts/client-lifecycle' },
       { text: 'Builders', link: '/builders/overview' },
-      { text: 'Interactions', link: '/interactions/overview' },
-      { text: 'Components', link: '/components/overview' },
-      { text: 'Collectors', link: '/collectors/overview' }
+      { text: 'Performance', link: '/performance/overview' },
+      { text: 'Voice', link: '/voice/overview' },
+      { text: 'Database', link: '/database/overview' },
+      { text: 'Deployment', link: '/deployment/overview' }
     ],
     
     sidebar: {
@@ -181,6 +182,63 @@ export default defineConfig({
           text: 'Previews',
           items: [
             { text: 'Overview', link: '/previews/overview' }
+          ]
+        }
+      ],
+
+      '/performance/': [
+        {
+          text: 'Performance',
+          items: [
+            { text: 'Overview', link: '/performance/overview' },
+            { text: 'Sharding', link: '/performance/sharding' },
+            { text: 'Cache Management', link: '/performance/cache-management' },
+            { text: 'Rate Limits', link: '/performance/rate-limits' },
+            { text: 'Memory Optimization', link: '/performance/memory-optimization' },
+            { text: 'Large Bots', link: '/performance/large-bots' }
+          ]
+        }
+      ],
+
+      '/voice/': [
+        {
+          text: 'Voice',
+          items: [
+            { text: 'Overview', link: '/voice/overview' },
+            { text: 'Voice Connections', link: '/voice/voice-connections' },
+            { text: 'Audio Players', link: '/voice/audio-players' },
+            { text: 'Resource Lifecycle', link: '/voice/resource-lifecycle' },
+            { text: 'Lavalink Integration', link: '/voice/lavalink' },
+            { text: 'Error Handling', link: '/voice/error-handling' }
+          ]
+        }
+      ],
+
+      '/database/': [
+        {
+          text: 'Database',
+          items: [
+            { text: 'Overview', link: '/database/overview' },
+            { text: 'Schema Design', link: '/database/schema-design' },
+            { text: 'MongoDB Integration', link: '/database/mongodb' },
+            { text: 'Prisma ORM', link: '/database/prisma' },
+            { text: 'Redis Caching', link: '/database/redis' },
+            { text: 'Data Consistency', link: '/database/data-consistency' }
+          ]
+        }
+      ],
+
+      '/deployment/': [
+        {
+          text: 'Deployment',
+          items: [
+            { text: 'Overview', link: '/deployment/overview' },
+            { text: 'Environment Variables', link: '/deployment/environment-variables' },
+            { text: 'VPS Setup', link: '/deployment/vps' },
+            { text: 'Docker Containerization', link: '/deployment/docker' },
+            { text: 'PM2 Management', link: '/deployment/pm2' },
+            { text: 'CI/CD Pipelines', link: '/deployment/ci-cd' },
+            { text: 'Production Checklist', link: '/deployment/production-checklist' }
           ]
         }
       ]

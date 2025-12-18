@@ -1,21 +1,28 @@
-# Discord.js Documentation
+# Discord.js Documentation v0.4.0
 
-Complete documentation handbook for Discord.js v14.25.1
+Complete production handbook for Discord.js v14.25.1
 
 ## 📚 Sections
 
+### Development
 - [Getting Started](/getting-started/introduction) - Learn the basics and set up your first bot
 - [Core Concepts](/core-concepts/client-lifecycle) - Understand fundamental Discord.js concepts
 - [Builders](/builders/overview) - Master the builder pattern for safe API interactions
 
+### Production
+- [Performance](/performance/overview) - Scaling, caching, and optimization strategies
+- [Voice](/voice/overview) - Audio streaming, Lavalink, and voice processing
+- [Database](/database/overview) - Data modeling, multiple storage solutions, consistency
+- [Deployment](/deployment/overview) - Hosting, CI/CD, and production operations
+
 ## 🎯 Focus
 
-This documentation focuses on **Discord.js v14.25.1** with modern patterns:
+This documentation provides **complete production coverage** for Discord.js v14.25.1:
 
-- Slash commands first
-- Builders over raw JSON
-- `async/await` only
-- Clean, maintainable code
+- **Enterprise Scale** - Patterns for bots serving 1000+ servers
+- **Zero Placeholders** - Every guide contains complete, working examples
+- **Modern Architecture** - Microservices, clustering, and orchestration
+- **Production Ready** - Monitoring, deployment, and operational practices
 
 ## 🚀 Quick Start
 
