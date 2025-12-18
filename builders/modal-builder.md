@@ -562,4 +562,3 @@ async function handleFeedbackSubmission(interaction) {
 
 - [FileBuilder](/builders/file-builder) - Handle file attachments
 - [ContainerBuilder](/builders/container-builder) - Organize UI components
-- [TextInputBuilder](/builders/text-input-builder) - Create text input fields

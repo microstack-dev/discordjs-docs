@@ -379,5 +379,4 @@ modal.addComponents(container.toJSON())
 ## Next Steps
 
 - [SectionBuilder](/builders/section-builder) - Create structured content sections
-- [ActionRowBuilder](/builders/action-row-builder) - Organize components in rows
 - [ModalBuilder](/builders/modal-builder) - Build interactive forms
