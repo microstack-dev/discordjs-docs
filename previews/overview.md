@@ -111,10 +111,32 @@ Each preview includes:
 - **Key elements** highlighted
 - **Platform notes** (desktop/mobile differences)
 
-## Next Steps
+## Preview Guidelines
 
-- [Slash Command Responses](/previews/slash-command-responses) - Command output examples
-- [Embeds](/previews/embeds) - Embed visualization
-- [Components](/previews/components) - Interactive elements
-- [Modals](/previews/modals) - Form interfaces
-- [Error States](/previews/error-states) - Error handling UI
+### Image Requirements
+- **Format**: PNG or WebP for optimal web performance
+- **Size**: Optimized for documentation viewing
+- **Quality**: Clear, readable text and UI elements
+- **Context**: Show complete Discord interface sections
+
+### Code-to-Preview Mapping
+Each preview demonstrates:
+- **Input code** that generates the output
+- **Visual result** showing actual Discord appearance
+- **Key differences** between platforms when relevant
+- **Accessibility notes** for inclusive design
+
+### Implementation Notes
+
+Previews serve as visual references to help developers understand how their Discord.js code will appear to users. They bridge the gap between code and user experience, making the documentation more practical and user-friendly.
+
+```css
+/* Example preview styling */
+.preview-container {
+  border: 2px solid #5865f2;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #36393f;
+}
+```

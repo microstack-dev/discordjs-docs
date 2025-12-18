@@ -455,8 +455,51 @@ try {
 }
 ```
 
-## Next Steps
+## Best Practices
 
-- [Centralized Handling](/error-handling/centralized-handling) - Global error management
-- [Interaction-Safe Errors](/error-handling/interaction-safe-errors) - Safe user responses
-- [Logging](/error-handling/logging) - Comprehensive error logging
+### Error Classification
+
+```js
+function classifyError(error) {
+  if (error.code >= 50000) {
+    return 'discord_api'
+  }
+
+  if (error.code >= 10000) {
+    return 'user_error'
+  }
+
+  if (error.message.includes('timeout')) {
+    return 'timeout'
+  }
+
+  if (error.message.includes('permission')) {
+    return 'permission'
+  }
+
+  return 'application'
+}
+```
+
+### Monitoring and Alerts
+
+```js
+class ErrorMonitor {
+  constructor() {
+    this.errors = new Map()
+    this.alertThreshold = 10
+  }
+
+  trackError(error, context) {
+    const key = `${error.name}:${context.source || 'unknown'}`
+    const now = Date.now()
+    const minute = Math.floor(now / 60000)
+    const userRequests = this.errors.get(key) || []
+    const recentRequests = userRequests.filter(time => now - time < 60000)
+
+    if (recentRequests.length >= this.alertThreshold) {
+      console.warn(`High error rate for ${key}: ${recentRequests.length} errors/min`)
+    }
+  }
+}
+```

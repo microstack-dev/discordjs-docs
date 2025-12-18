@@ -329,8 +329,53 @@ setInterval(() => {
 }, 60000)
 ```
 
-## Next Steps
+## Best Practices
 
-- [Event Handler Patterns](/events/event-handler-patterns) - Advanced patterns
-- [Event Loaders](/events/event-loaders) - Dynamic loading
-- [Error Isolation](/events/error-isolation) - Safe error handling
+### Event Handler Structure
+
+```js
+// Good: Separate concerns
+client.on('ready', handleReady)
+client.on('messageCreate', handleMessage)
+client.on('interactionCreate', handleInteraction)
+
+// Bad: Large inline handlers
+client.on('messageCreate', async (message) => {
+  // 100+ lines of code
+})
+```
+
+### Resource Management
+
+```js
+// Clean up event listeners
+function setupTemporaryListener(client, event, handler, duration = 60000) {
+  const listener = (...args) => {
+    handler(...args)
+    client.removeListener(event, listener)
+  }
+
+  client.on(event, listener)
+
+  setTimeout(() => {
+    client.removeListener(event, listener)
+  }, duration)
+}
+```
+
+### Monitoring
+
+```js
+const eventMetrics = new Map()
+
+client.on('raw', (packet) => {
+  const count = eventMetrics.get(packet.t) || 0
+  eventMetrics.set(packet.t, count + 1)
+})
+
+// Log metrics periodically
+setInterval(() => {
+  console.log('Event metrics:', Object.fromEntries(eventMetrics))
+  eventMetrics.clear()
+}, 60000)
+```
